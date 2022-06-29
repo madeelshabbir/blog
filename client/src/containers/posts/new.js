@@ -1,14 +1,14 @@
 import { Button, Form } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 
-import { postCreateApi } from '../../apis/posts/create';
+import { postCreateApi } from '../../apis/posts';
 
-export const CreationForm = () => {
+export const PostCreationForm = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = async (event) => {
     const { title } = event;
     await postCreateApi({ title });
-  };
+};
 
   return (
     <div>
