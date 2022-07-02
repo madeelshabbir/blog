@@ -15,7 +15,7 @@ export const PostIndex = () => {
       <h3>Posts</h3>
       {posts.map((post) =>
         (<Container className='mt-3' key={post.id}>
-          <PostShow title={post.title} />
+          <PostShow id={post.id} title={post.title} />
         </Container>)
       )}
     </div>

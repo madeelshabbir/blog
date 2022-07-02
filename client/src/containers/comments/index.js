@@ -7,8 +7,8 @@ import { commentIndexApi } from '../../apis/comments';
 export const CommentIndex = ({ postId }) => {
   const [comments, setComments] = useState([]);
   useEffect(() => {
-    commentIndexApi().then((res) => setComments(res.data));
-  }, []);
+    commentIndexApi(postId).then((res) => setComments(res.data));
+  }, [postId]);
 
   return (
     <div>
