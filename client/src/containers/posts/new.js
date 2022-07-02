@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { postCreateApi } from '../../apis/posts';
 
 export const PostCreationForm = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit} = useForm();
   const onSubmit = async (event) => {
     const { title } = event;
     await postCreateApi({ title });
@@ -16,7 +16,7 @@ export const PostCreationForm = () => {
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group>
           <Form.Label>Title</Form.Label>
-          <Form.Control {...register('title', { reuired: true })}></Form.Control>
+          <Form.Control {...register('title')}></Form.Control>
         </Form.Group>
         <Button className='mt-2' type='submit'>Submit</Button>
       </Form>

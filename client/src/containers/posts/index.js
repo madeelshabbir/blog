@@ -8,12 +8,12 @@ export const PostIndex = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     postIndexApi().then((res) => setPosts(res.data));
-  }, [posts]);
+  }, []);
 
   return (
     <div>
       <h3>Posts</h3>
-      {posts?.map((post) =>
+      {posts.map((post) =>
         (<Container className='mt-3' key={post.id}>
           <PostShow title={post.title} />
         </Container>)

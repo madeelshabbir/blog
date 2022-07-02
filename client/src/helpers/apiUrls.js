@@ -1,6 +1,10 @@
 export const apiUrls = {
+  comments: {
+    create: (id) => `posts/${id}/comments`,
+    index: (id) => `posts/${id}/comments`
+  },
   posts: {
-    index: 'posts',
-    create: 'posts'
+    create: 'posts',
+    index: 'posts'
   }
 };
