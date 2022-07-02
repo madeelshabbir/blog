@@ -1,15 +1,6 @@
 import { Container } from 'react-bootstrap';
-import { useEffect, useState } from 'react';
 
-import { commentIndexApi } from '../../apis/comments';
-
-
-export const CommentIndex = ({ postId }) => {
-  const [comments, setComments] = useState([]);
-  useEffect(() => {
-    commentIndexApi(postId).then((res) => setComments(res.data));
-  }, [postId]);
-
+export const CommentIndex = ({ comments }) => {
   return (
     <div>
       {comments.map((comment) =>

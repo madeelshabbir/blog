@@ -78,5 +78,6 @@ window.env = {
   "npm_node_execpath": "/Users/dev/.nvm/versions/node/v16.14.2/bin/node",
   "npm_config_prefix": "/Users/dev/.nvm/versions/node/v16.14.2",
   "REACT_APP_POST_SERVICE_BASE_URL": "http://localhost:3001/",
-  "REACT_APP_COMMENT_SERVICE_BASE_URL": "http://localhost:3002/"
+  "REACT_APP_COMMENT_SERVICE_BASE_URL": "http://localhost:3002/",
+  "REACT_APP_QUERY_SERVICE_BASE_URL": "http://localhost:3003/"
 };
