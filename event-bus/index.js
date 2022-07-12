@@ -16,16 +16,16 @@ app.post('/events', (req, res) => {
 
   events.push(event);
 
-  axios.post('http://localhost:3001/events', event)
+  axios.post('http://post-srv:3001/events', event)
   .catch((err) => console.log(err.message));
 
-  axios.post('http://localhost:3002/events', event)
+  axios.post('http://comment-srv:3002/events', event)
   .catch((err) => console.log(err.message));
 
-  axios.post('http://localhost:3003/events', event)
+  axios.post('http://query-srv:3003/events', event)
   .catch((err) => console.log(err.message));
 
-  axios.post('http://localhost:3005/events', event)
+  axios.post('http://moderation-srv:3005/events', event)
   .catch((err) => console.log(err.message));
 
   res.send({status: 'OK'});

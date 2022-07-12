@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ext-post-srv
+  name: ext-comment-srv
 spec:
   type: NodePort
   selector:
-    app: post
+    app: comment
   ports:
-    - name: post
+    - name: comment
       protocol: TCP
-      port: 3001
-      targetPort: 3001
+      port: 3002
+      targetPort: 3002

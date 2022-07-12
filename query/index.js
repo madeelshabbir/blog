@@ -44,7 +44,7 @@ app.post('/events', (req, res) => {
 app.listen(3003, async () => {
   console.log('Server running at port 3003');
 
-  axios.get('http://localhost:3004/events')
+  axios.get('http://event-bus-srv:3004/events')
    .then((events) => events.data.forEach((event) => handleEvents(event.type, event.data)))
    .catch((error) => console.log(error.message));
 });
