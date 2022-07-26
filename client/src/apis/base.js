@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-export const baseApi = (base_url, route, data = {}, method = 'get') => {
+export const baseApi = (route, data = {}, method = 'get') => {
   return axios(
     {
       method: method,
-      url: base_url + route,
+      url: process.env.REACT_APP_BASE_URL + route,
       data
     }
   );
